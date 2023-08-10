@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
+import Header from './components/Header';
+import List from './components/List';
+import Person from './components/Person';
 
 function App() {
+  function handleclick() {
+    alert("Hello PWSkills")
+  }
+  const items= ["Item Job", "Item Job"]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Person name="Manish" age="21"/>
+    <Button text="Click me" onClick={handleclick}/>
+    <Header title="This is Header Component"/>
+    
+      <List items={items}/>
     </div>
   );
 }
